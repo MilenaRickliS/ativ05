@@ -7,6 +7,17 @@
         text-align: center;
         font-size: 50px;
     }
+    a{
+        color: black;
+        background-color: #98B06F;
+        padding: 10px;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: .2s ;
+    }
+    a:hover {
+        background-color: #B6DC76;
+    }
     .informacoes {
         list-style: none;
         padding: 40px;
@@ -32,12 +43,16 @@
 <h1>{{ $c['nome']}}</h1>
 
 <div class="informacoes">
+
     <div>
+    <a href="/cidades">Voltar</a>
+    <br>
         <p>ID: {{ $c['id']}}</p>
         <p>Estado: {{ $c['estado']}}</p>
         <p>População: {{ $c['populacao']}}</p>
         <p>Área em km2: {{ $c['area']}}</p>
-        <p>País: {{ $c['pais']}}</p> 
+        <p>País: {{ $c['pais']}}</p>
+        
     </div>
     <img src="{{ $c['imagem']}}" />
 </div>
